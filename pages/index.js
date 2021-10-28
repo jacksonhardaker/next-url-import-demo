@@ -1,8 +1,15 @@
+import { useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { init } from 'https://cdn.jsdelivr.net/gh/jacksonhardaker/next-url-import-demo/remote.js';
 
 export default function Home() {
+
+  useEffect(() => {
+    init();
+  }, []);
+
   return (
     <div className={styles.container}>
       <Head>
